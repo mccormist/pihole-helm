@@ -23,8 +23,6 @@ spec:
     port:       53
     targetPort: 53
     protocol:   UDP
-  externalIPs:
-  - 192.168.1.16
-  - 192.168.1.132
-  selector:
-    app: {{ template "fullname" . }}
+  type: LoadBalancer
+  loadBalancerIP: 10.99.2.200
+ 

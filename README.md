@@ -28,8 +28,8 @@ persistence:
 Additional dns entries
 ```
 configData: |-
-  server=/local/192.168.1.1
-  address=/.cminion.cf/192.168.1.132
+  server=/local/10.99.0.1
+  address=/.cminion.cf/10.99.2.200
 ```
 Web Interface host for ingrss
 ```

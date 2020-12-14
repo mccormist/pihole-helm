@@ -8,7 +8,7 @@ metadata:
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 spec:
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
@@ -23,7 +23,7 @@ spec:
         kubernetes.io/hostname: randomstore
       containers:
       - name: {{ .Chart.Name }}
-        image: pihole/pihole:4.0.0-1
+        image: pihole/pihole:latest
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         stdin: true
         tty: true
@@ -32,11 +32,11 @@ spec:
             memory: 1Gi
         env:
         - name: 'ServerIP'
-          value: '0.0.0.0'
+          value: '10.99.2.200'
         - name: 'DNS1'
-          value: '8.8.8.8'
+          value: '10.99.0.1'
         - name: 'DNS2'
-          value: '10.0.0.10'
+          value: '8.8.8.8'
         ports:
         - name: webui
           containerPort: 81 
