@@ -16,7 +16,7 @@ persistence:
 
 configData: |-
   server=/local/10.99.0.1
-  address=/.cminion.cf/10.99.2.200
+  address=/.cminion.cf/10.99.2.1
 
 ingress:
   host: dns.cminion.cf
