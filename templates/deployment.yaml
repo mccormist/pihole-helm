@@ -1,7 +1,10 @@
-apiVersion: extensions/v1beta1
+apiVersion: v1
 kind: Deployment
 metadata:
   name: {{ template "fullname" . }}
+---
+apiVersion: v1
+kind: ConfigMap
   labels:
     chart: {{ .Chart.Name}}-{{ .Chart.Version | replace "+" "_" }}
     app: {{ template "fullname" . }}
